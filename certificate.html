@@ -72,36 +72,35 @@
         <h3 class="text-xl font-semibold text-blue-300 border-b border-blue-300 pb-2 text-center">Aguna Course Certificates (5)</h3>
         <div class="w-full overflow-x-auto">
           <div class="flex gap-4 py-4 w-max">
-            <img src="linuxfundamental.jpeg" alt="" class="w-64 rounded-lg object-cover" />
-            <img src="networkfundamental.jpeg" alt="" class="w-64 rounded-lg object-cover" />
-            <img src="pythonfundamental.jpeg" alt="" class="w-64 rounded-lg object-cover" />
-            <img src="vmfundamental.jpeg" alt="" class="w-64 rounded-lg object-cover" />
-            <img src="sjpnetlab.jpeg" alt="" class="w-64 rounded-lg object-cover" />
+            <img src="linuxfundamental.jpeg" alt="" class="w-64 rounded-lg object-cover cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openLightbox(this.src)" />
+            <img src="networkfundamental.jpeg" alt="" class="w-64 rounded-lg object-cover cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openLightbox(this.src)" />
+            <img src="pythonfundamental.jpeg" alt="" class="w-64 rounded-lg object-cover cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openLightbox(this.src)" />
+            <img src="vmfundamental.jpeg" alt="" class="w-64 rounded-lg object-cover cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openLightbox(this.src)" />
+            <img src="sjpnetlab.jpeg" alt="" class="w-64 rounded-lg object-cover cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openLightbox(this.src)" />
           </div>
         </div>
       </div>
-
+      
       <!-- RedHat -->
       <div>
         <h3 class="text-xl font-semibold text-red-500 border-b border-red-300 pb-2 text-center">RedHat Certificates (2)</h3>
         <div class="w-full overflow-x-auto">
           <div class="flex gap-4 py-4 w-max">
-            <img src="RH104.jpeg" alt="" class="w-64 rounded-lg object-cover" />
-            <img src="RH124.jpeg" alt="" class="w-64 rounded-lg object-cover" />
+            <img src="RH104.jpeg" alt="" class="w-64 rounded-lg object-cover cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openLightbox(this.src)" />
+            <img src="RH124.jpeg" alt="" class="w-64 rounded-lg object-cover cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openLightbox(this.src)" />
           </div>
         </div>
       </div>
-
+      
       <!-- Always Ngoding -->
       <div>
         <h3 class="text-xl font-semibold text-green-500 border-b border-green-300 pb-2 text-center">Always Ngoding Certificate (1)</h3>
         <div class="w-full overflow-x-auto">
           <div class="flex gap-4 py-4 w-max">
-            <img src="alwaysngoding.jpeg" alt="" class="w-64 rounded-lg object-cover" />
+            <img src="alwaysngoding.jpeg" alt="" class="w-64 rounded-lg object-cover cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openLightbox(this.src)" />
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </main>
@@ -110,6 +109,14 @@
 <footer class="bg-slate-800 text-center py-6 border-t border-slate-700">
   <p class="text-sm text-slate-400 select-none">© 2025 Syntia Dwi. All rights reserved.</p>
 </footer>
+  
+<!-- Lightbox Modal -->
+<div id="lightboxModal" class="fixed inset-0 hidden justify-center items-center z-[100] bg-black/80">
+  <div class="relative max-w-full max-h-full p-4">
+    <img id="lightboxImg" src="" alt="Preview" class="max-h-[90vh] max-w-full rounded-lg shadow-xl" />
+    <button onclick="closeLightbox()" class="absolute top-2 right-2 text-white text-3xl font-bold bg-red-500 hover:bg-red-700 rounded-full w-10 h-10 flex items-center justify-center shadow-lg">&times;</button>
+  </div>
+</div>
 
 <script>
   // Highlight navbar
@@ -130,6 +137,20 @@
       }
     });
   });
+  // Lightbox JS
+  function openLightbox(src) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    img.src = src;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeLightbox() {
+    const modal = document.getElementById('lightboxModal');
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+  }
 </script>
 
 </body>
