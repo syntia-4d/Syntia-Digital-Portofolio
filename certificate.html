@@ -58,34 +58,19 @@
       color: #3b82f6; /* Warna biru */
       text-shadow: 0 0 6px #60a5fa, 0 0 12px #3b82f6, 0 0 18px #2563eb;
     }
-    #mobileMenu {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease-in-out;
-    }
-    #mobileMenu.open {
-      max-height: 500px; /* Cukup besar untuk menampung semua item */
-    }
   </style>
 </head>
 <body class="bg-slate-900 min-h-screen flex flex-col text-white">
+  <!-- Navbar -->
   <nav class="w-full bg-white/10 backdrop-blur-md shadow sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16 items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center h-auto sm:h-16 py-4 sm:py-0 gap-2 sm:gap-0">
       <!-- Logo -->
-      <div class="flex-shrink-0 text-2xl font-semibold text-blue-400 select-none">
+      <div class="text-2xl font-semibold text-blue-400 select-none">
         Syntia's Portfolio
       </div>
 
-      <!-- Hamburger Button (Mobile) -->
-      <div class="md:hidden">
-        <button id="menuToggle" class="text-white focus:outline-none text-2xl">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-
-      <!-- Menu Desktop -->
-      <div class="hidden md:flex space-x-8">
+      <!-- Navigation Links -->
+      <div class="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8">
         <a class="nav-link text-white hover:text-blue-400 font-medium" href="index.html">Introduction</a>
         <a class="nav-link text-white hover:text-blue-400 font-medium" href="about.html">About</a>
         <a class="nav-link text-white hover:text-blue-400 font-medium" href="skills.html">Skills</a>
@@ -93,17 +78,8 @@
         <a class="nav-link text-white hover:text-blue-400 font-medium" href="contact.html">Contact</a>
       </div>
     </div>
-
-      <!-- Menu Mobile (Dropdown) -->
-      <div id="mobileMenu" class="md:hidden flex-col space-y-4 mt-4 pb-4">
-        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="index.html">Introduction</a>
-        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="about.html">About</a>
-        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="skills.html">Skills</a>
-        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="certificate.html">Certificate</a>
-        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="contact.html">Contact</a>
-      </div>
-    </div>
   </nav>
+  
 <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 <section class="tab-content" id="sertificate">
     <div class="max-w-6xl mx-auto space-y-10 fade-in">
@@ -237,21 +213,6 @@
     if (e.target === modal) {
       closeModal();
     }
-  });
-
-    // === Toggle Mobile Menu ===
-    const toggleBtn = document.getElementById("menuToggle");
-    const mobileMenu = document.getElementById("mobileMenu");
-    let menuOpen = false;
-
-    toggleBtn.addEventListener("click", () => {
-    menuOpen = !menuOpen;
-    mobileMenu.classList.toggle("open");
-
-    // Ganti ikon
-    toggleBtn.innerHTML = menuOpen
-      ? '<i class="fas fa-times"></i>'
-      : '<i class="fas fa-bars"></i>';
   });
 </script>
 
