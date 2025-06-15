@@ -75,37 +75,51 @@
   </nav>
 
   <!-- About Content -->
-  <main class="flex-grow max-w-7xl mx-auto px-4 py-10">
+  <main class="flex-grow max-w-7xl mx-auto px-4 py-10 w-full overflow-hidden">
     <section id="about">
       <div class="max-w-6xl mx-auto">
         <h2 class="text-4xl font-bold text-blue-700 text-center mb-8">About Me</h2>
         <div class="flex flex-col md:flex-row items-start gap-10">
-          <div class="mx-auto md:mx-0">
-            <img src="foto.jpeg" alt="Foto Syntia" class="rounded-full w-60 h-60 object-cover shadow-lg border-4 border-blue-500 transition-all hover:scale-105 hover:shadow-blue-500/50" />
+          <!-- Foto -->
+          <div class="mx-auto md:mx-0 flex-shrink-0">
+            <img src="foto.jpeg" alt="Foto Syntia" class="rounded-full w-52 h-52 sm:w-60 sm:h-60 object-cover shadow-lg border-4 border-blue-500 transition-all hover:scale-105 hover:shadow-blue-500/50" />
           </div>
-          <div class="horizontal-scroll flex space-x-6 pt-6 pb-4">
-            <!-- Card 1 -->
-            <div class="flex-shrink-0 w-80 bg-white/10 text-gray-300 rounded-xl shadow-lg p-6 hover:scale-105 transition-transform relative">
-              <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">
-                <i class="fas fa-user text-xl"></i>
+  
+          <!-- Card Scroll Horizontal -->
+          <div class="w-full overflow-x-auto horizontal-scroll mt-4">
+            <div class="flex gap-6 w-max py-2 px-1">
+              <!-- Card 1 -->
+              <div class="flex-shrink-0 w-80 bg-white/10 text-gray-300 rounded-xl shadow-lg p-6 transition-transform duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(99,102,241,0.5)] relative">
+                <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">
+                  <i class="fas fa-user text-xl"></i>
+                </div>
+                <p class="mt-6">
+                  Nama saya Syntia Dwi Nikmatul Jannah. Saya lahir pada tanggal 4 September 2007, di Surabaya. Saya tinggal di Ds. Ngaringan, Kec. Gandusari, Kab. Blitar. Saat ini, saya masih seorang siswi di SMKN 1 Nglegok dengan jurusan Teknik Komputer dan Jaringan (TKJ).
+                </p>
               </div>
-              <p class="mt-6">Nama saya Syntia Dwi Nikmatul Jannah. Saya lahir pada tanggal 4 September 2007, di Surabaya. Saya tinggal di Ds. Ngaringan, Kec. Gandusari, Kab. Blitar. Saat ini, saya masih seorang siswi di SMKN 1 Nglegok dengan jurusan Teknik Komputer dan Jaringan (TKJ).</p>
-            </div>
-            <!-- Card 2 -->
-            <div class="flex-shrink-0 w-80 bg-white/10 text-gray-300 rounded-xl shadow-lg p-6 hover:scale-105 transition-transform relative">
-              <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">
-                <i class="fas fa-laptop text-xl"></i>
+  
+              <!-- Card 2 -->
+              <div class="flex-shrink-0 w-80 bg-white/10 text-gray-300 rounded-xl shadow-lg p-6 transition-transform duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(99,102,241,0.5)] relative">
+                <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">
+                  <i class="fas fa-laptop text-xl"></i>
+                </div>
+                <p class="mt-6">
+                  Selama masa belajar, saya telah mempelajari berbagai hal seputar jaringan komputer, sistem operasi, pengembangan web, serta administrasi server. Saya memiliki ketertarikan yang kuat pada dunia teknologi, khususnya di bidang konfigurasi jaringan, Linux, dan pembuatan website.
+                </p>
               </div>
-              <p class="mt-6">Selama masa belajar, saya telah mempelajari berbagai hal seputar jaringan komputer, sistem operasi, pengembangan web, serta administrasi server. Saya memiliki ketertarikan yang kuat pada dunia teknologi, khususnya di bidang konfigurasi jaringan, Linux, dan pembuatan website.</p>
-            </div>
-            <!-- Card 3 -->
-            <div class="flex-shrink-0 w-80 bg-white/10 text-gray-300 rounded-xl shadow-lg p-6 hover:scale-105 transition-transform relative">
-              <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">
-                <i class="fas fa-lightbulb text-xl"></i>
+  
+              <!-- Card 3 -->
+              <div class="flex-shrink-0 w-80 bg-white/10 text-gray-300 rounded-xl shadow-lg p-6 transition-transform duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(99,102,241,0.5)] relative">
+                <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">
+                  <i class="fas fa-lightbulb text-xl"></i>
+                </div>
+                <p class="mt-6">
+                  Saya mampu bekerja secara tim maupun individu dalam menyelesaikan tugas dan proyek. Saya memiliki komunikasi yang baik, mampu berpikir kritis, serta disiplin dalam mengelola waktu dan bertanggung jawab.
+                </p>
               </div>
-              <p class="mt-6">Saya mampu bekerja secara tim maupun individu dalam menyelesaikan tugas dan proyek. Saya memiliki komunikasi yang baik, mampu berpikir kritis, serta disiplin dalam mengelola waktu dan bertanggung jawab.</p>
             </div>
           </div>
+  
         </div>
       </div>
     </section>
