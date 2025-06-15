@@ -60,17 +60,21 @@
 <main class="flex-grow max-w-7xl mx-auto px-4 py-10 w-full overflow-hidden">
   <section>
     <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 text-center mb-6">My Certificates</h2>
-    <p class="text-center text-purple-300 bg-white/10 rounded-xl p-4 max-w-2xl mx-auto mb-10">
-      Berikut adalah beberapa sertifikat yang telah saya peroleh selama menempuh studi dengan jurusan Teknik Komputer dan Jaringan (TKJ) di SMKN 1 Nglegok.
-    </p>
+
+    <!-- Deskripsi Sertifikat -->
+    <div class="group bg-white/10 backdrop-blur-md rounded-xl shadow-lg px-1 py-4 max-w-3xl mx-auto text-center space-y-6 text-gray-200 text-sm sm:text-base transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(99,102,241,0.5)] mt-8">
+      <p class="text-purple-300">
+        Berikut adalah beberapa sertifikat yang telah saya peroleh selama menempuh studi dengan jurusan Teknik Komputer dan Jaringan (TKJ) di SMKN 1 Nglegok.
+      </p>
+    </div>
 
     <!-- Certificate Sections -->
-    <div class="space-y-10">
+    <div class="space-y-12 mt-12">
 
       <!-- Aguna -->
-      <div>
-        <h3 class="text-xl font-semibold text-blue-300 border-b border-blue-300 pb-2 text-center">Aguna Course Certificates (5)</h3>
-        <div class="w-full overflow-x-auto">
+      <div class="text-center">
+        <h3 class="text-xl font-semibold text-blue-300 border-b-2 border-blue-300 pb-1 inline-block">Aguna Course Certificates (5)</h3>
+        <div class="w-full overflow-x-auto mt-4">
           <div class="flex gap-4 py-4 w-max">
             <img src="linuxfundamental.jpeg" alt="" class="w-64 rounded-lg object-cover cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openLightbox(this.src)" />
             <img src="networkfundamental.jpeg" alt="" class="w-64 rounded-lg object-cover cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openLightbox(this.src)" />
@@ -80,27 +84,28 @@
           </div>
         </div>
       </div>
-      
+
       <!-- RedHat -->
-      <div>
-        <h3 class="text-xl font-semibold text-red-500 border-b border-red-300 pb-2 text-center">RedHat Certificates (2)</h3>
-        <div class="w-full overflow-x-auto">
+      <div class="text-center">
+        <h3 class="text-xl font-semibold text-red-500 border-b-2 border-red-300 pb-1 inline-block">RedHat Certificates (2)</h3>
+        <div class="w-full overflow-x-auto mt-4">
           <div class="flex gap-4 py-4 w-max">
             <img src="RH104.jpeg" alt="" class="w-64 rounded-lg object-cover cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openLightbox(this.src)" />
             <img src="RH124.jpeg" alt="" class="w-64 rounded-lg object-cover cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openLightbox(this.src)" />
           </div>
         </div>
       </div>
-      
+
       <!-- Always Ngoding -->
-      <div>
-        <h3 class="text-xl font-semibold text-green-500 border-b border-green-300 pb-2 text-center">Always Ngoding Certificate (1)</h3>
-        <div class="w-full overflow-x-auto">
+      <div class="text-center">
+        <h3 class="text-xl font-semibold text-green-500 border-b-2 border-green-300 pb-1 inline-block">Always Ngoding Certificate (1)</h3>
+        <div class="w-full overflow-x-auto mt-4">
           <div class="flex gap-4 py-4 w-max">
             <img src="alwaysngoding.jpeg" alt="" class="w-64 rounded-lg object-cover cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openLightbox(this.src)" />
           </div>
         </div>
       </div>
+      
     </div>
   </section>
 </main>
