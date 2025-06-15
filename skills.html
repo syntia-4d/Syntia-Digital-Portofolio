@@ -34,14 +34,6 @@
       color: #3b82f6; /* Warna biru */
       text-shadow: 0 0 6px #60a5fa, 0 0 12px #3b82f6, 0 0 18px #2563eb;
     }
-    #mobileMenu {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease-in-out;
-    }
-    #mobileMenu.open {
-      max-height: 500px; /* Cukup besar untuk menampung semua item */
-    }
   </style>
 </head>
 <body class="bg-slate-900 min-h-screen flex flex-col text-white">
@@ -152,21 +144,6 @@
         link.classList.remove("nav-link-glow");
       }
     });
-  });
-
-    // === Toggle Mobile Menu ===
-    const toggleBtn = document.getElementById("menuToggle");
-    const mobileMenu = document.getElementById("mobileMenu");
-    let menuOpen = false;
-
-    toggleBtn.addEventListener("click", () => {
-    menuOpen = !menuOpen;
-    mobileMenu.classList.toggle("open");
-
-    // Ganti ikon
-    toggleBtn.innerHTML = menuOpen
-      ? '<i class="fas fa-times"></i>'
-      : '<i class="fas fa-bars"></i>';
   });
 </script>
 
